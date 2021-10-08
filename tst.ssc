@@ -1,0 +1,15 @@
+[Depression]
+Volume=1.0
+l_avg=1.0
+Consider=0
+
+[SSK]
+Cell=0
+Skin_V=0
+l_avg=1
+T_K=320
+RA_V=20.0
+Consider=1
+MMfile=tst.mm
+OMfile=tst.om
+RTBfile=

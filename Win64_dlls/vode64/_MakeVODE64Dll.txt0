@@ -1,0 +1,88 @@
+del *.o
+gfortran -m64 -mrtd -c -v vode_dll.f vode.f vodea.f vodes.f
+objdump -a vode_dll.o
+
+del junk.tmp
+gfortran -v -m64 -mdll -o junk.tmp -Wl,--base-file base.tmp vode_dll.o vode.o vodea.o 
+objdump -a junk.tmp
+
+del temp.exp
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+objdump -a temp.exp
+
+del vode_dll.dll
+gfortran -m64 -v -g -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp
+dir objdump -a 
+objdump -a vode_dll.dll
+
+del vode64.dll
+rename vode_dll.dll vode64.dll
+strip vode64.dll
+
+
+
+****************** ашкн Б 2001
+
+**************** FINALLY ************************************************
+del *.o
+g77 -mrtd -c -v -fugly-assumed vode_dll.f vode.f vodea.f 
+g77 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp vode_dll.o vode.o vodea.o 
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+g77 -v -g -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp >vode_dll.map 
+checkdll vode_dll.dll
+dvode_prg                                                                
+
+
+TEST 
+    -ggdb  >vode_dll.map            g77 -mrtd -c -v vodes.f !!!
+del *.o
+g77 -mrtd -c -v -fugly-assumed vode_dll.f vode.f vodea.f 
+g77 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp vode_dll.o vode.o vodea.o 
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+g77 -v -g -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp >vode_dll.map 
+checkdll vode_dll.dll
+dvode_prg
+
+************************************************************
+
+
+
+g77 -c *.f
+dllwrap --export-all --driver-name g77 -o vode_dll.dll *.o
+pexports -o vode_dll.dll
+
+      open(6, file='vode_tst.log')                         
+      write(6,*)ISTATE, ACNRM
+      close(6)
+
+
+g77 -c -v -fbounds-check -fno-automatic -fugly-args *.f
+g77 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp vode_dll.o vode.o vodea.o
+del junk.tmp                                    
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+rem del base.tmp
+rem recommended gcc -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp
+g77 -v -g -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp,-M -L./ -lvode_dll >vode_dll.map
+
+Handles (load addrs) are: 64300000 25f0000
+Image is relocatable
+dllwrap --export-all --driver-name g77 -o vode_dll.dll vodes.o
+
+
+**************** VODES ***************************
+g77 -c -v -fbounds-check -fno-automatic -fugly-args vodes.f
+g77 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp vodes.o
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+g77 -v -g -mdll -o vode_dll.dll vodes.o -Wl,temp.exp,-M -L./ -lvode_dll >vode_dll.map
+checkdll vode_dll.dll
+dvode_prg
+
+***************** BEST *******************************************
+g77 -mrtd -c -v vodes.f 
+g77 -v -mdll -o junk.tmp -Wl,--base-file base.tmp vodes.o 
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+g77 -v -g -mdll -o vode_dll.dll vodes.o -Wl,temp.exp,-M -L./ -lvode_dll >vode_dll.map 
+checkdll vode_dll.dll
+dvode_prg
+
+

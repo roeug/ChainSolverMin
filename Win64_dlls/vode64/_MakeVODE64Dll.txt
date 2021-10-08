@@ -1,0 +1,24 @@
+************************** make VODE64.DLL 
+
+
+del *.o
+gfortran -m64 -mrtd -c -v vode_dll.f vode.f vodea.f vodes.f
+objdump -a vode_dll.o
+
+del junk.tmp
+gfortran -v -m64 -mdll -o junk.tmp -Wl,--base-file base.tmp vode_dll.o vode.o vodea.o 
+objdump -a junk.tmp
+
+del temp.exp
+dlltool -v --dllname vode_dll.dll --base-file base.tmp --output-exp temp.exp --def vode_dll.def
+objdump -a temp.exp
+
+del vode_dll.dll
+gfortran -m64 -v -g -mdll -o vode_dll.dll vode_dll.o vode.o vodea.o -Wl,temp.exp
+dir objdump -a 
+objdump -a vode_dll.dll
+
+del vode64.dll
+rename vode_dll.dll vode64.dll
+strip vode64.dll
+

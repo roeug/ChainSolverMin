@@ -1,0 +1,79 @@
+************************** make MEBDF64.DLL 
+
+del *.o
+gfortran -m64 -mrtd -c -v meb_dll.f mebdfdae.f 
+objdump -a radau_dll.o
+
+del junk.tmp
+gfortran -m64 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp meb_dll.o mebdfdae.o
+objdump -a junk.tmp
+
+del temp.exp
+dlltool -v --dllname meb_dll.dll --base-file base.tmp --output-exp temp.exp --def meb_dll.def
+objdump -a temp.exp
+
+del meb_dll.dll
+gfortran -m64 -v -g -mdll -o meb_dll.dll meb_dll.o mebdfdae.o -Wl,temp.exp
+objdump -a meb_dll.dll
+                     
+del mebdf64.dll                     
+rename meb_dll.dll mebdf64.dll
+objdump -a mebdf64.dll
+
+strip mebdf64.dll
+
+
+
+
+
+
+
+
+
+
+
+del *.o
+gfortran -m64 -mrtd -c -v meb_dll.f mebdfdae.f 
+objdump -a meb_dll.o
+
+del junk.tmp
+gfortran -m64 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp meb_dll.o mebdfdae.o
+objdump -a junk.tmp
+
+del temp.exp
+dlltool -v --dllname meb_dll.dll --base-file base.tmp --output-exp temp.exp --def meb_dll.def
+objdump -a temp.exp
+
+del meb_dll.dll
+gfortran -m64 -v -g -mdll -o meb_dll.dll meb_dll.o mebdfdae.o -Wl,temp.exp 
+objdump -a meb_dll.dll
+
+del radau64.dll                     
+rename meb_dll.dll mebdf64.dll
+objdump -a mebdf64.dll
+
+strip mebdf64.dll
+
+
+
+***************************************** ашкн Б 2001
+g77  mebdfd.f  medakzo.f  mebdfdae.f report.f 
+move /Y a.exe medakzo.exe
+medakzo.exe
+
+g77  mebdfd.f  hires.f  mebdfdae.f report.f 
+move /Y a.exe hires.exe
+hires.exe
+
+g77  mebdfd.f  pollu.f  mebdfdae.f report.f 
+move /Y a.exe pollu.exe
+pollu.exe
+
+del *.o
+g77 -mrtd -c -v -fugly-assumed meb_dll.f mebdfdae.f 
+g77 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp meb_dll.o mebdfdae.o
+dlltool -v --dllname meb_dll.dll --base-file base.tmp --output-exp temp.exp --def meb_dll.def
+g77 -v -g -mdll -o meb_dll.dll meb_dll.o mebdfdae.o -Wl,temp.exp >meb_dll.map 
+..\checkdll meb_dll.dll
+..\pexports  meb_dll.dll
+meb_prg

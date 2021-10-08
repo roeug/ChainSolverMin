@@ -1,0 +1,101 @@
+TE (LUNIT, 30) I1,I2
+ 30   FORMAT(6X,'In above message,  I1 =',I10,3X,'I2 =',I10)
+      IF (NR .EQ. 1) WRITE (LUNIT, 40) R1
+ 40   FORMAT(6X,'In above message,  R1 =',D21.13)
+      IF (NR .EQ. 2) WRITE (LUNIT, 50) R1,R2
+ 50   FORMAT(6X,'In above,  R1 =',D21.13,3X,'R2 =',D21.13)
+C Abort the run if LEVEL = 2. ------------------------------------------
+ 100  IF (LEVEL .NE. 2) RETURN
+      STOP
+C----------------------- End of Subroutine XERRWD ----------------------
+      END
+*DECK XSETUN
+      SUBROUTINE XSETUN (LUN)
+C-----------------------------------------------------------------------
+C This routine resets the logical unit number for messages.
+C
+C Subroutines called by XSETUN.. None
+C Function routine called by XSETUN.. IXSAV
+C-----------------------------------------------------------------------
+      INTEGER LUN, JUNK, IXSAV
+C
+      IF (LUN .GT. 0) JUNK = IXSAV (1,LUN,.TRUE.)
+      RETURN
+C----------------------- End of Subroutine XSETUN ----------------------
+      END
+*DECK XSETF
+      SUBROUTINE XSETF (MFLAG)
+C-----------------------------------------------------------------------
+C This routine resets the print control flag MFLAG.
+C
+C Subroutines called by XSETF.. None
+C Function routine called by XSETF.. IXSAV
+C-----------------------------------------------------------------------
+      INTEGER MFLAG, JUNK, IXSAV
+C
+      IF (MFLAG .EQ. 0 .OR. MFLAG .EQ. 1) JUNK = IXSAV (2,MFLAG,.TRUE.)
+      RETURN
+C----------------------- End of Subroutine XSETF -----------------------
+      END
+*DECK IXSAV
+      INTEGER FUNCTION IXSAV (IPAR, IVALUE, ISET)
+      LOGICAL ISET
+      INTEGER IPAR, IVALUE
+C-----------------------------------------------------------------------
+C IXSAV saves and recalls one of two error message parameters:
+C   LUNIT, the logical unit number to which messages are printed, and
+C   MESFLG, the message print flag.
+C This is a modification of the SLATEC library routine J4SAVE.
+C
+C Saved local variables..
+C  LUNIT  = Logical unit number for messages.
+C           The default is 6 (machine-dependent).
+C  MESFLG = Print control flag..
+C           1 means print all messages (the default).
+C           0 means no printing.
+C
+C On input..
+C   IPAR   = Parameter indicator (1 for LUNIT, 2 for MESFLG).
+C   IVALUE = The value to be set for the parameter, if ISET = .TRUE.
+C   ISET   = Logical flag to indicate whether to read or write.
+C            If ISET = .TRUE., the parameter will be given
+C            the value IVALUE.  If ISET = .FALSE., the parameter
+C            will be unchanged, and IVALUE is a dummy argument.
+C
+C On return..
+C   IXSAV = The (old) value of the parameter.
+C
+C Subroutines/functions called by IXSAV.. None
+C-----------------------------------------------------------------------
+      INTEGER LUNIT, MESFLG
+C-----------------------------------------------------------------------
+C The following Fortran-77 declaration is to cause the values of the
+C listed (local) variables to be saved between calls to this routine.
+C-----------------------------------------------------------------------
+      SAVE LUNIT, MESFLG
+      DATA LUNIT/6/, MESFLG/1/
+C
+      IF (IPAR .EQ. 1) THEN
+        IXSAV = LUNIT
+        IF (ISET) LUNIT = IVALUE
+        ENDIF
+C
+      IF (IPAR .EQ. 2) THEN
+        IXSAV = MESFLG
+        IF (ISET) MESFLG = IVALUE
+        ENDIF
+C
+      RETURN
+C----------------------- End of Function IXSAV -------------------------
+      END
+
+c-----------------------------------------------------------------------
+c     additional routines required by VODE
+c-----------------------------------------------------------------------
+      subroutine prepj (neq, y, yh, nyh, ewt, ftem, savf, wm, iwm,
+     1   f, jac)
+clll. optimize
+      external f, jac
+      integer neq, nyh, iwm
+      integer iownd, iowns,
+     1   icf, ierpj, iersl, jcur, jstart, kflag, l, meth, miter,

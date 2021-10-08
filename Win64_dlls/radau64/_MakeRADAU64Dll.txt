@@ -1,0 +1,26 @@
+************************** make RADAU64.DLL 
+
+
+del *.o
+gfortran -m64 -mrtd -c -v radau_dll.f radau.f radaua.f 
+objdump -a radau_dll.o
+
+del junk.tmp
+gfortran -m64 -v -mdll -o junk.tmp -Wl,--base-file,base.tmp radau_dll.o radau.o radaua.o 
+objdump -a junk.tmp
+
+del temp.exp
+dlltool -v --dllname radau_dll.dll --base-file base.tmp --output-exp temp.exp --def radau_dll.def
+objdump -a temp.exp
+
+del radau_dll.dll
+gfortran -m64 -v -g -mdll -o radau_dll.dll radau_dll.o radau.o radaua.o -Wl,temp.exp
+objdump -a radau_dll.dll
+                     
+del radau64.dll                     
+rename radau_dll.dll radau64.dll
+objdump -a radau64.dll
+
+strip radau64.dll
+
+

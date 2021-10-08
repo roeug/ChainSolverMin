@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ChainSolverMinL64.dpr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="14"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UnitChainEditorMin.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="_FormChainEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="425"/>
+        <CursorPos X="26" Y="434"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ChainClassesMin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="CadClassesMin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UnitLookInOOB.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UnitFormMemoOkCancel.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <CursorPos Y="45"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="NuclideClassesMin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="647"/>
+        <CursorPos X="64" Y="663"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UnitSplashSolverMin.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="BKStringGrid.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="351"/>
+        <CursorPos X="11" Y="372"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1143"/>
+        <CursorPos X="67" Y="1156"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="DVODEu4cc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Encryp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="EuLibMin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="145"/>
+        <CursorPos X="3" Y="161"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="LSODA4cc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="QStringsMin.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3508"/>
+        <CursorPos Y="3518"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ObjectsMin.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2705"/>
+        <CursorPos X="23" Y="2715"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\interfaces\win32\win32wscontrols.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Win32WSControls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="205"/>
+        <CursorPos Y="220"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2273"/>
+        <CursorPos Y="2288"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\application.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2151"/>
+        <CursorPos Y="2176"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UnitDM_OOB.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1026"/>
+        <CursorPos X="3" Y="1039"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\grids.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10078"/>
+        <CursorPos Y="10094"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\radiogroup.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="496"/>
+        <CursorPos Y="512"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\buttoncontrol.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\radiobutton.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\customcheckbox.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="53"/>
+        <CursorPos Y="69"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="5415"/>
+        <CursorPos Y="5430"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\lclmessageglue.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="114"/>
+        <CursorPos Y="131"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\interfaces\win32\win32callback.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2755"/>
+        <CursorPos Y="2773"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1898"/>
+        <CursorPos Y="1913"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="SelfShieldingCalculatorClassesMin.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="244"/>
+        <CursorPos Y="258"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\usr\local\codetyphon\typhon\ide\typhon.pp"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="112"/>
+        <CursorPos X="115" Y="123"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="DM_OOD.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="592"/>
+        <CursorPos X="31" Y="593"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\usr\local\codetyphon\typhon\components\BaseDebuggerFp\source\fpdbgdwarf.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="FpDbgDwarf"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2885"/>
+        <CursorPos X="60" Y="2897"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\usr\local\codetyphon\typhon\lcl\controls.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4391"/>
+        <CursorPos X="27" Y="4403"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\usr\local\codetyphon\typhon\lcl\include\docktree.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="123"/>
+        <CursorPos X="5" Y="134"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="27">
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="15576" Column="69" TopLine="15572"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="4408" Column="35" TopLine="4396"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="4405" Column="47" TopLine="4395"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="4310" Column="33" TopLine="4296"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="4406" Column="47" TopLine="4396"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="UnitChainEditorMin.pas"/>
+        <Caret Line="514" TopLine="503"/>
+      </Position>
+      <Position>
+        <Filename Value="ObjectsMin.pas"/>
+        <Caret Line="2245" TopLine="2235"/>
+      </Position>
+      <Position>
+        <Filename Value="QStringsMin.pas"/>
+        <Caret Line="3518" TopLine="3508"/>
+      </Position>
+      <Position>
+        <Filename Value="ObjectsMin.pas"/>
+        <Caret Line="2245" TopLine="2235"/>
+      </Position>
+      <Position>
+        <Filename Value="ObjectsMin.pas"/>
+        <Caret Line="2715" Column="23" TopLine="2705"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1823" TopLine="1814"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1822" Column="54" TopLine="1814"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1820" Column="60" TopLine="1811"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1823" Column="38" TopLine="1811"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1815" Column="54" TopLine="1811"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1818" Column="66" TopLine="1811"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1830" Column="57" TopLine="1787"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1484" TopLine="1482"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1497" Column="13" TopLine="1481"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="778" Column="31" TopLine="771"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="1437" Column="24" TopLine="1084"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainCalculatorMin.pas"/>
+        <Caret Line="787" Column="9" TopLine="771"/>
+      </Position>
+      <Position>
+        <Filename Value="UnitChainEditorMin.pas"/>
+        <Caret Line="520" Column="41" TopLine="503"/>
+      </Position>
+      <Position>
+        <Filename Value="UnitChainEditorMin.pas"/>
+        <Caret Line="710" Column="47" TopLine="701"/>
+      </Position>
+      <Position>
+        <Filename Value="ChainSolverMinL64.dpr"/>
+        <Caret Line="76" Column="38" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="UnitChainEditorMin.pas"/>
+        <Caret Line="710" Column="47" TopLine="701"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default">
+        <Mode Name="default">
+          <local>
+            <CommandLineParams Value="tst"/>
+          </local>
+        </Mode>
+      </Modes>
+    </RunParams>
+    <HistoryLists>
+      <List Name="LaunchingApplication" Type="File" Count="4">
+        <Item1 Value="/usr/bin/xterm -T &apos;Typhon Run Output&apos; -e $(TargetCmdLine)"/>
+        <Item2 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
+        <Item3 Value="${CmdExe} ${TargetCmdLine}"/>
+        <Item4 Value="&quot;$(Pas2JSBrowser)&quot; &quot;$(Pas2JSProjectURL)&quot;"/>
+      </List>
+      <List Name="CommandLineParameters" Count="2">
+        <Item1 Value="tst"/>
+        <Item2 Value="_Ni_ERR"/>
+      </List>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\codetyphon\typhon\lcl\grids.pas"/>
+        <Line Value="10094"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ObjectsMin.pas"/>
+        <InitialEnabled Value="False"/>
+        <Line Value="11525"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="QStringsMin.pas"/>
+        <Line Value="12292"/>
+      </Item>
+    </BreakPoints>
+    <Watches>
+      <Item>
+        <Expression Value="DllFileNameToLoad"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

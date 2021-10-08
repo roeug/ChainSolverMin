@@ -1,0 +1,28 @@
+280620
+Ni-62
+0 // Lambda from NuclideState Stable // Decay
+15b // TotalSigmaC from NuclideState  // THERMAL
+6.6b // TotalRI from NuclideState  // RESONANCE
+0.0037298b // TotalSigmaFast from NuclideState 
+1.0004 // g_factor from NuclideState 
+// comment
+280620 end
+280630
+Ni-63
+0// Lambda from NuclideState T=100y // Decay
+0.3b // 24.4b from NuclideState  // THERMAL 30b -OK
+0 // RI default=0 // RESONANCE
+0 // SigmaFast default=0
+1 // g_factor from NuclideState 
+// comment 
+100%  -B- // decay from NuclideState
+280630 end
+280620
+280630
+//decay
+15b // THERMAL Capture to 0 from NuclideList 14.5
+ // RESONANCE
+//Fast
+1.0004 // G_FACTOR from NuclideList
+// auto created by BuildDefaultLinks
+280620->280630 end

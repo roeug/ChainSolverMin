@@ -1,0 +1,38 @@
+************************************* 64-bit
+
+rm *.o
+gfortran -m64 -mrtd -fPIC -c -v meb_dll.f mebdfdae.f 
+objdump -a meb_dll.o
+
+rm junk.tmp
+gfortran -shared -o junk.tmp meb_dll.o mebdfdae.o
+objdump -a junk.tmp
+
+rm mebdf64.so
+cp junk.tmp  mebdf64.so
+objdump -a mebdf64.so
+
+strip mebdf64.so
+
+readelf -Ws mebdf64.so 
+
+
+************************************* 32-bit  sudo apt-get install gfortran-multilib   
+
+rm *.o
+gfortran -m32 -mrtd -fPIC -c -v meb_dll.f mebdfdae.f 
+objdump -a meb_dll.o
+
+rm junk.tmp
+gfortran -m32 -shared -o junk.tmp meb_dll.o mebdfdae.o
+objdump -a junk.tmp
+
+rm mebdf.so
+cp junk.tmp  mebdf.so
+objdump -a mebdf.so
+
+strip mebdf.so
+
+readelf -Ws mebdf.so 
+
+

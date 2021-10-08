@@ -1,0 +1,38 @@
+************************** make LSODA64.DLL 
+del *.o lsoda64.dll
+gfortran  -c -v  -m64 lsoda_d64.f adjlr.f aigbt.f ainvg.f blockdata.f bnorm.f cdrv.f cfode.f cntnzu.f d1mach.f daxpy.f dcopy.f ddot.f decbt.f dgbfa.f dgbsl.f dgefa.f dgesl.f dmach.f dscal.f ewset.f fnorm.f idamax.f intdy.f iprep.f jgroup.f lsoda.f lsodar.f lsode.f lsodes.f lsodi.f lsoibt.f md.f mdi.f mdm.f mdp.f mdu.f nnfc.f nnsc.f nntc.f nroc.f nsfc.f odrv.f pjibt.f prep.f prepj.f prepji.f prja.f prjs.f rchek.f roots.f slsbt.f slss.f solbt.f solsy.f srcom.f sro.f stoda.f stode.f stodi.f vmnorm.f vnorm.f xerrwv.f xsetf.f xsetun.f
+objdump -a lsoda_d64.o
+
+del junk.tmp
+gfortran -v -m64 -mdll -o junk.tmp -Wl,--base-file base.tmp lsoda_d64.o adjlr.o aigbt.o ainvg.o blockdata.o bnorm.o cdrv.o cfode.o cntnzu.o d1mach.o daxpy.o dcopy.o ddot.o decbt.o dgbfa.o dgbsl.o dgefa.o dgesl.o dmach.o dscal.o ewset.o fnorm.o idamax.o intdy.o iprep.o jgroup.o lsoda.o lsodar.o lsode.o lsodes.o lsodi.o lsoibt.o md.o mdi.o mdm.o mdp.o mdu.o nnfc.o nnsc.o nntc.o nroc.o nsfc.o odrv.o pjibt.o prep.o prepj.o prepji.o prja.o prjs.o rchek.o roots.o slsbt.o slss.o solbt.o solsy.o srcom.o sro.o stoda.o stode.o stodi.o vmnorm.o vnorm.o xerrwv.o xsetf.o xsetun.o
+dir junk.tmp
+
+dlltool -v --dllname lsoda_d64.dll --base-file base.tmp --output-exp temp.exp --def lsoda_d64.def
+objdump -a temp.exp
+
+dllwrap --driver-name gfortran --export-all-symbols -o lsoda64.dll lsoda_d64.o adjlr.o aigbt.o ainvg.o blockdata.o bnorm.o cdrv.o cfode.o cntnzu.o d1mach.o daxpy.o dcopy.o ddot.o decbt.o dgbfa.o dgbsl.o dgefa.o dgesl.o dmach.o dscal.o ewset.o fnorm.o idamax.o intdy.o iprep.o jgroup.o lsoda.o lsodar.o lsode.o lsodes.o lsodi.o lsoibt.o md.o mdi.o mdm.o mdp.o mdu.o nnfc.o nnsc.o nntc.o nroc.o nsfc.o odrv.o pjibt.o prep.o prepj.o prepji.o prja.o prjs.o rchek.o roots.o slsbt.o slss.o solbt.o solsy.o srcom.o sro.o stoda.o stode.o stodi.o vmnorm.o vnorm.o xerrwv.o xsetf.o xsetun.o  --def lsoda_d64.def
+objdump -a lsoda64.dll
+
+strip lsoda64.dll
+
+744860b
+
+dlltool -v --dllname lsoda_d64.dll --base-file base.tmp --output-exp temp.exp --def lsoda_d64.def
+dlltool --as "as --64" -v --dllname lsoda_d64.dll --base-file base.tmp --output-exp temp.exp --def lsoda_d64.def
+
+
+
+                  
+********** coments                                       
+-fugly-assumed deleted from   gfortran -mrtd ...
+-mrtd deleted from   gfortran -mrtd ... '-mrtd' is ignored in 64bit mode
+dll_verf.f deleted "for pipes - VER 20"                                       
+a_d.f - prgram a_d - for tests
+                                       
+************************    make EXE - not tested with win64
+del *.o a.exe lsoda.log
+gfortran  -m64 a_d.f90 adjlr.f aigbt.f ainvg.f blockdata.f bnorm.f cdrv.f cfode.f cntnzu.f d1mach.f daxpy.f dcopy.f ddot.f decbt.f dgbfa.f dgbsl.f dgefa.f dgesl.f dmach.f dscal.f ewset.f fnorm.f idamax.f intdy.f iprep.f jgroup.f lsoda.f lsodar.f lsode.f lsodes.f lsodi.f lsoibt.f md.f mdi.f mdm.f mdp.f mdu.f nnfc.f nnsc.f nntc.f nroc.f nsfc.f odrv.f pjibt.f prep.f prepj.f prepji.f prja.f prjs.f rchek.f roots.f slsbt.f slss.f solbt.f solsy.f srcom.f sro.f stoda.f stode.f stodi.f vmnorm.f vnorm.f xerrwv.f xsetf.f xsetun.f
+a.exe
+type lsoda.log
+                                       
+

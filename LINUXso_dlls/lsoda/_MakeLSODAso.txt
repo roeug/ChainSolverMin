@@ -1,0 +1,37 @@
+++++++++++++++++++ 64-bit
+
+rm *.o
+gfortran -m64 -mrtd -fPIC -c -v lsoda_d.f adjlr.f aigbt.f ainvg.f blockdata.f bnorm.f cdrv.f cfode.f cntnzu.f d1mach.f daxpy.f dcopy.f ddot.f decbt.f dgbfa.f dgbsl.f dgefa.f dgesl.f dmach.f dscal.f ewset.f fnorm.f idamax.f intdy.f iprep.f jgroup.f lsoda.f lsodar.f lsode.f lsodes.f lsodi.f lsoibt.f md.f mdi.f mdm.f mdp.f mdu.f nnfc.f nnsc.f nntc.f nroc.f nsfc.f odrv.f pjibt.f prep.f prepj.f prepji.f prja.f prjs.f rchek.f roots.f slsbt.f slss.f solbt.f solsy.f srcom.f sro.f stoda.f stode.f stodi.f vmnorm.f vnorm.f xerrwv.f xsetf.f xsetun.f
+objdump -a lsoda_d.o
+
+rm junk.tmp
+gfortran -shared -o junk.tmp lsoda_d.o adjlr.o aigbt.o ainvg.o blockdata.o bnorm.o cdrv.o cfode.o cntnzu.o d1mach.o daxpy.o dcopy.o ddot.o decbt.o dgbfa.o dgbsl.o dgefa.o dgesl.o dmach.o dscal.o ewset.o fnorm.o idamax.o intdy.o iprep.o jgroup.o lsoda.o lsodar.o lsode.o lsodes.o lsodi.o lsoibt.o md.o mdi.o mdm.o mdp.o mdu.o nnfc.o nnsc.o nntc.o nroc.o nsfc.o odrv.o pjibt.o prep.o prepj.o prepji.o prja.o prjs.o rchek.o roots.o slsbt.o slss.o solbt.o solsy.o srcom.o sro.o stoda.o stode.o stodi.o vmnorm.o vnorm.o xerrwv.o xsetf.o xsetun.o
+objdump -a junk.tmp
+
+rm lsoda64.so
+cp junk.tmp  lsoda64.so
+objdump -a lsoda64.so
+
+strip  lsoda64.so
+
+readelf -Ws  lsoda64.so
+
+
+**************************** 32-bit   sudo apt-get install gfortran-multilib
+
+rm *.o
+gfortran -m32 -mrtd -fPIC -c -v lsoda_d.f adjlr.f aigbt.f ainvg.f blockdata.f bnorm.f cdrv.f cfode.f cntnzu.f d1mach.f daxpy.f dcopy.f ddot.f decbt.f dgbfa.f dgbsl.f dgefa.f dgesl.f dmach.f dscal.f ewset.f fnorm.f idamax.f intdy.f iprep.f jgroup.f lsoda.f lsodar.f lsode.f lsodes.f lsodi.f lsoibt.f md.f mdi.f mdm.f mdp.f mdu.f nnfc.f nnsc.f nntc.f nroc.f nsfc.f odrv.f pjibt.f prep.f prepj.f prepji.f prja.f prjs.f rchek.f roots.f slsbt.f slss.f solbt.f solsy.f srcom.f sro.f stoda.f stode.f stodi.f vmnorm.f vnorm.f xerrwv.f xsetf.f xsetun.f
+objdump -a lsoda_d64.o
+
+rm junk.tmp
+gfortran -m32 -shared -o junk.tmp lsoda_d.o adjlr.o aigbt.o ainvg.o blockdata.o bnorm.o cdrv.o cfode.o cntnzu.o d1mach.o daxpy.o dcopy.o ddot.o decbt.o dgbfa.o dgbsl.o dgefa.o dgesl.o dmach.o dscal.o ewset.o fnorm.o idamax.o intdy.o iprep.o jgroup.o lsoda.o lsodar.o lsode.o lsodes.o lsodi.o lsoibt.o md.o mdi.o mdm.o mdp.o mdu.o nnfc.o nnsc.o nntc.o nroc.o nsfc.o odrv.o pjibt.o prep.o prepj.o prepji.o prja.o prjs.o rchek.o roots.o slsbt.o slss.o solbt.o solsy.o srcom.o sro.o stoda.o stode.o stodi.o vmnorm.o vnorm.o xerrwv.o xsetf.o xsetun.o
+objdump -a junk.tmp
+
+rm lsoda.so
+cp junk.tmp  lsoda.so
+objdump -a lsoda.so
+
+strip  lsoda.so
+
+readelf -Ws  lsoda.so
+

@@ -1,0 +1,4 @@
+; dlltool --base-file C:\TEMP\cca01232.base --output-exp lsoda_d.exp --dllname lsoda_d.dll --output-def __tst.def --exclude-symbol=DllMainCRTStartup@12 --def C:\TEMP\cca01232.def
+EXPORTS
+;	lsoda_ @ 31 ; 
+	lsodad_ @ 1 ; 

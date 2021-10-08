@@ -1,0 +1,37 @@
+************************************* 64-bit
+
+rm *.o
+gfortran -m64 -mrtd -fPIC -c -v radau_dll.f radau.f radaua.f 
+objdump -a radau_dll.o
+
+rm junk.tmp
+gfortran -shared -o junk.tmp radau_dll.o radau.o radaua.o
+objdump -a junk.tmp
+
+rm radau64.so
+cp junk.tmp  radau64.so
+objdump -a radau64.so
+
+strip radau64.so
+
+readelf -Ws radau64.so 
+
+************************************* 32-bit  sudo apt-get install gfortran-multilib       
+
+rm *.o
+gfortran -m32 -mrtd -fPIC -c -v radau_dll.f radau.f radaua.f
+objdump -a radau_dll.o
+
+rm junk.tmp
+gfortran -m32 -shared -o junk.tmp radau_dll.o radau.o radaua.o
+objdump -a junk.tmp
+
+rm radau.so
+cp junk.tmp  radau.so
+objdump -a radau.so
+
+strip radau.so
+
+readelf -Ws radau.so 
+
+
