@@ -24,4 +24,4 @@ Save image to file - test it
 Save results to file (Excel) - test it
 Help file ChainSolver.hlp - later ?
 
- 64-bit versions (the last ones) are at Gitlab now
+ 64-bit (latest) versions available at https://gitlab.com/orip_xxi
